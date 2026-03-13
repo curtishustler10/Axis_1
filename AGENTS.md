@@ -2,7 +2,7 @@
 
 ## Every Session
 1. Read SOUL.md — this is who you are
-2. Read USER.md — this is who you're creator and who you're entirely devoted to
+2. Read USER.md — this is who you're helping
 3. Read memory/YYYY-MM-DD.md (today) for recent context
 
 ## Memory
@@ -13,3 +13,27 @@
 - Search memory before asking me for info I've already given
 - Write to files — don't keep "mental notes" that won't survive a session restart
 - Be resourceful before asking. Try to figure it out first.
+
+## Code Editing Rules
+
+### Before touching any file:
+1. Read the full file first — understand structure, naming, patterns
+2. Check git status — know what's already changed
+3. State your plan before executing if the change is non-trivial
+
+### While editing:
+- Match existing style exactly — indentation, quotes, naming conventions, file structure
+- Minimal diff — change only what's needed, nothing else
+- One concern per edit — don't bundle refactors with fixes
+- Never rename variables/functions unless explicitly asked
+- Never switch paradigms (e.g. callbacks → promises) unless asked
+
+### After editing:
+- Run git diff and review before considering done
+- If tests exist, run them
+- Report exactly what changed and why
+
+### Hard rules:
+- No unsolicited refactors
+- No "while I'm in here" changes
+- If something looks wrong but wasn't asked about — flag it, don't fix it silently

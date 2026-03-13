@@ -1,0 +1,1 @@
+Mar 12, 2026 15:20 UTC — Content brainstorm (20 text overlays), Gallery update (Cloudinary), Booking modal branding (black/gold), Created session-wrap-up skill, Added approval-first rule to SOUL.md — Decisions: both keywords + inactivity trigger wrap-up — Pending: Swipe file URLs, Stripe keys, SSL domain
