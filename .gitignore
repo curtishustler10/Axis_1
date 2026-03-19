@@ -1,0 +1,5 @@
+.env
+.env.google
+.env.repos
+google-credentials*.json
+MEMORY.md
