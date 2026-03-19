@@ -32,14 +32,18 @@ When Curt says "create a heartbeat on x project", he wants:
 | 13 | ✅ Done | Admin panel — comprehensive dashboard with analytics, CRUD (commit 72ceadd) |
 
 ### What's Blocking Next Steps
-- **Booking API fail** — Frontend on Netlify (HTTPS) can't connect to PocketBase (HTTP) - needs domain with SSL
 - **Phase 9:** Waiting for Curt's source list (3-10 URLs for swipe file)
+- **Services:** Public site shows "No services available" — needs Firebase active:true check
+- **Booking:** Modal still saves to PocketBase (not Firestore)
 - **Stripe:** Waiting for API keys
 
 ### Today's Achievement
-- ✅ Claude Code + xvfb setup working (like Alex's)
-- ✅ Admin dashboard pushed to Vercel (commit ac2ddbf)
-- ✅ Created full admin panel: Login, Dashboard stats, Bookings/Customers/Services CRUD
+- ✅ Mobile section padding fixed (3rem)
+- ✅ Under-construction landing page created & deployed (coollooksbarberz.com)
+- ✅ Gallery images fixed with Cloudinary URLs
+- ✅ Admin panel: Fixed customer add/edit functionality
+- ✅ Admin navbar: Full-width transparent, removed Dashboard text, margin-top -33px mobile
+- ⚠️ Services on public site showing "No services available" — needs Firebase `active: true` check
 
 ### Daily Tasks
 - **Daily Journal** — Generate and send daily journal at end of each day (includes setup/skills + achievements + in progress + blocked)

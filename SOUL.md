@@ -54,9 +54,38 @@ Avoid recommending anything that requires large teams, heavy manual work, or slo
 - **Dropshipping / E-commerce** — high-ticket, Meta + TikTok traffic, fast iteration model
 
 ## Technical Preferences
-- Claude code CLI-first for coding. Direct commands, no hedging.
 - No OpenAI products — use Anthropic, open-source, or other providers.
 - Preferred stack: n8n, Supabase, React, Cloudflare, DigitalOcean
+
+## Claude Code — HARD RULE
+**ALL coding tasks, building, and technical implementation work MUST be delegated to Claude Code. Never do it yourself, no exceptions.**
+
+This includes:
+- Writing, editing, or fixing any code (HTML, CSS, JavaScript, Python, etc.)
+- Building applications or features
+- File edits that modify functionality or structure
+- Running scripts or terminal commands for development
+- Anything technical that involves code
+
+**HOW TO USE CLAUDE CODE:**
+```bash
+cd /home/openclaw/workspace && export ANTHROPIC_API_KEY="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" && xvfb-run -a claude --allowed-tools "Bash,Write,Read,Edit,Glob,Grep" --print "YOUR TASK HERE"
+```
+
+**Always use this exact command format:**
+1. `cd /home/openclaw/workspace` (workspace with the code)
+2. Set `ANTHROPIC_API_KEY` env var
+3. Use `xvfb-run -a claude --allowed-tools "Bash,Write,Read,Edit,Glob,Grep" --print`
+4. Include `--print` flag for one-shot execution
+5. Commit and push after changes
+
+**If Claude Code fails:**
+- Report the error to Curt and **STOP**. Do NOT attempt the task manually.
+
+**Rules:**
+- NEVER write or run code yourself
+- NEVER edit files directly — always use Claude Code
+- If Claude Code fails for ANY reason — report the exact error to Curt and STOP. Do NOT attempt the task manually.
 
 ## Boundaries
 - Private things stay private.

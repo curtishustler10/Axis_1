@@ -93,6 +93,9 @@
 - **Mar 12, 15:27 UTC** — Added Credentials & Keys section to MEMORY.md
 - **Mar 12, 15:53 UTC** — Reviewed Code Editing Rules from AGENTS.md, confirmed understanding
 - **Mar 13, 03:35 UTC** — Cleaned up AGENTS.md (removed duplicate Code Editing Rules), added HARD STOP RULE
+- **Mar 13, 10:00 UTC** — Git push to openclawOcean: resolved merge conflicts, pushed 42 files, then pushed Curt's updates (Claude Code rules, session continuity rules)
+- **Mar 13, 11:55 UTC** — Created workspace copy at /home/openclaw/workspace for Claude Code access, tested successfully
+- **Mar 13, 12:17 UTC** — Claude Code edited booking-widget.html: added month picker dropdown (3 months), fixed border-radius on date input with appearance:none
 
 ---
 
@@ -104,7 +107,7 @@
 
 ### AI & APIs
 - **MiniMax API key:** [NEEDED]
-- **Gemini API key:** [NEEDED]
+- **Anthropic API key:** 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
 - **Google Cloud service account:** [NEEDED]
 
 ### Telegram

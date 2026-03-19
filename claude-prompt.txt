@@ -1,0 +1,43 @@
+Review the current project structure for the Coollooks23 Barbershop website + booking system.
+
+## What I'm Building
+I'm an AI assistant (AXIS) that helps Curtis run his businesses. I built this project from scratch using:
+- Frontend: Plain HTML/JS hosted on Netlify
+- Backend: PocketBase for data, n8n for automations, LiteLLM as AI proxy
+- Database: Firebase Firestore (I migrated services/bookings here recently)
+
+## Current Structure
+
+CB23FAA/
+|-- Frontend (Netlify - coollooks23.netlify.app)
+|   |-- index.html              (Landing page)
+|   |-- coollooks23-full-site.html (Main site with booking modal)
+|   |-- services.html           (Standalone services page - still PocketBase!)
+|   |-- booking-widget.html     (Embeddable widget)
+|   |-- under-construction.html  (Placeholder)
+|   +-- admin.html              (Admin dashboard)
+|
+|-- Backend (DigitalOcean droplet)
+|   |-- PocketBase (:8090)      (Legacy DB)
+|   |-- n8n (:5678)             (Automation)
+|   +-- LiteLLM (:4000)         (AI proxy)
+|
++-- Database
+    |-- PocketBase (old)
+    +-- Firebase Firestore (current)
+        |-- services (name, price, duration, category, active)
+        |-- bookings (customer, service, date, time, barber, status)
+        +-- customers (name, email, phone, notes)
+
+## The Problem
+Services on the public site show "No services available" even though:
+- Services exist in Firebase Firestore
+- Most are enabled in admin panel
+- The code filters for s.active === true
+
+## Questions
+1. What's your review of this architecture?
+2. Why might services be showing "No services available"?
+3. Any recommendations for improvement?
+
+Just give me your thoughts - I'm the one who built this, so be direct.
