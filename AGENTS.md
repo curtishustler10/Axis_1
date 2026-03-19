@@ -39,11 +39,28 @@
 - If something looks wrong but wasn't asked about — flag it, don't fix it silently
 
 ## Claude Code Delegation
-- Any task involving writing, fixing, or running code → delegate to Claude Code
-- Command: `claude --dangerously-skip-permissions -p "exact task"`
-- If Claude Code errors → report error + stop. Never substitute manual coding.
+
+**This is a hard rule. There are no exceptions.**
+
+Any task involving writing, reading, fixing, reviewing, or running code → delegate to Claude Code.
+
+### Correct Command (required every time):
+```bash
+cd /home/openclaw/workspace && export ANTHROPIC_API_KEY="$(cat /root/.openclaw/.env | grep ANTHROPIC_API_KEY | cut -d= -f2)" && xvfb-run -a claude --allowed-tools "Bash,Write,Read,Edit,Glob,Grep" --print "YOUR EXACT TASK HERE"
+```
+
+**Why `xvfb-run -a` is required:** This server is headless. Claude Code needs a virtual display. Without it, the command silently fails or exits immediately. This is NOT optional.
+
+### If Claude Code fails:
+- Report the exact error to Curt
+- Stop. Do not attempt the task yourself.
+- Do not substitute `curl`, manual file reads, or your own analysis
+- Ask Curt what to do next
+
+**You finding the answer yourself is NOT a success. It is a failure to follow protocol.**
 
 ## Tool Failure Protocol
 - If any tool fails (browser, API, Claude Code) → report what failed and what Curt needs to do
 - Never silently try a different approach
 - Never substitute browser for API or vice versa
+- Never do manually what a tool was supposed to do
